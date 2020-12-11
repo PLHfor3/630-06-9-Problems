@@ -4,6 +4,7 @@ import com.gmail.prestonhigg17.HorseBarn.HorseBarn;
 import com.gmail.prestonhigg17.SelfDivisor.SelfDivisorExecutePartA;
 import com.gmail.prestonhigg17.SelfDivisor.SelfDivisorExecutePartB;
 import com.gmail.prestonhigg17.StringPart.StringRun;
+import com.gmail.prestonhigg17.TwoVarStatistics.VarStatsRun;
 
 import java.text.MessageFormat;
 import java.util.Scanner;
@@ -22,7 +23,7 @@ public class Main
                     " - Type \"DivideA\" to run the Self Divisor Part A Program",
                     " - Type \"DivideB\" to run the Self Divisor Part B Program",
                     " - Type \"Horse\" to run the Horse Program",
-                    " - Type \"Battery\" to run the Battery Program",
+                    " - Type \"Stats\" to run the Stats Program",
                     " - Type \"String\" to run the String-Part Program\n $ "));
             scannerVar = scan.next();
             initializer++;
@@ -35,9 +36,9 @@ public class Main
             } else if (scannerVar.equals("Horse"))
             {
                 HorseBarn.run();
-            } else if (scannerVar.equals("Battery"))
+            } else if (scannerVar.equals("Stats"))
             {
-                StringRun.run();
+                VarStatsRun.run();
             } else if (scannerVar.equals("String"))
             {
                 StringRun.run();
@@ -60,7 +61,6 @@ public class Main
                 System.out.print("\n");
                 typeSpaceClear++;
             }
-
         }
     }
 
