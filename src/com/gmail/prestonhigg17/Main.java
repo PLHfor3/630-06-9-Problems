@@ -1,5 +1,10 @@
 package com.gmail.prestonhigg17;
 
+import com.gmail.prestonhigg17.HorseBarn.HorseBarn;
+import com.gmail.prestonhigg17.SelfDivisor.SelfDivisorExecutePartA;
+import com.gmail.prestonhigg17.SelfDivisor.SelfDivisorExecutePartB;
+import com.gmail.prestonhigg17.StringPart.StringRun;
+
 import java.text.MessageFormat;
 import java.util.Scanner;
 
@@ -8,36 +13,34 @@ public class Main
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
-        DiceRun dice = new DiceRun();
-        BatteryRun battery = new BatteryRun();
-        StringRun stringrun = new StringRun();
+
         String scannerVar = "";
         int initializer = 0;
-        while ((scannerVar.equals("DiceA") || scannerVar.equals("DiceB") || scannerVar.equals("DiceC") || scannerVar.equals("Battery") || scannerVar.equals("String")) || initializer < 1)
+        while ((scannerVar.equals("DivideA") || scannerVar.equals("DivideB") || scannerVar.equals("DiceC") || scannerVar.equals("Battery") || scannerVar.equals("String")) || initializer < 1)
         {
             System.out.print(MessageFormat.format("Please choose a program below or type \"exit\" to exit: \n{0}\n{1}\n{2}\n{3}\n{4}",
-                    " - Type \"DiceA\" to run the Dice Class: Assignment Part A Program",
-                    " - Type \"DiceB\" to run the Dice Class: Assignment Part B Program",
-                    " - Type \"DiceC\" to run the Dice Class: Assignment Part C Program",
+                    " - Type \"DivideA\" to run the Self Divisor Part A Program",
+                    " - Type \"DivideB\" to run the Self Divisor Part B Program",
+                    " - Type \"Horse\" to run the Horse Program",
                     " - Type \"Battery\" to run the Battery Program",
                     " - Type \"String\" to run the String-Part Program\n $ "));
             scannerVar = scan.next();
             initializer++;
-            if (scannerVar.equals("DiceA"))
+            if (scannerVar.equals("DivideA"))
             {
-                dice.runA();
-            } else if (scannerVar.equals("DiceB"))
+                SelfDivisorExecutePartA.SelfDivA();
+            } else if (scannerVar.equals("DivideB"))
             {
-                dice.runB();
-            } else if (scannerVar.equals("DiceC"))
+                SelfDivisorExecutePartB.SelfDivB();
+            } else if (scannerVar.equals("Horse"))
             {
-                dice.runC();
+                HorseBarn.run();
             } else if (scannerVar.equals("Battery"))
             {
-                battery.run();
+                StringRun.run();
             } else if (scannerVar.equals("String"))
             {
-                stringrun.run();
+                StringRun.run();
             } else
             {
                 System.out.print("Terminating process...\n ");
