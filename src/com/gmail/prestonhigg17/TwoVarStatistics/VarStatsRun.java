@@ -15,8 +15,8 @@ public class VarStatsRun
         int size = scan.nextInt();
         for (int record = 0; record < size; record++)
         {
-            int xValue = scan.nextInt();
-            int yValue = scan.nextInt();
+            double xValue = scan.nextDouble();
+            double yValue = scan.nextDouble();
             tvs.addXY(xValue, yValue);
         }
         System.out.println(tvs.toString());

@@ -17,7 +17,7 @@ public class Main
 
         String scannerVar = "";
         int initializer = 0;
-        while ((scannerVar.equals("DivideA") || scannerVar.equals("DivideB") || scannerVar.equals("DiceC") || scannerVar.equals("Battery") || scannerVar.equals("String")) || initializer < 1)
+        while ((scannerVar.equals("DivideA") || scannerVar.equals("DivideB") || scannerVar.equals("Stats") || scannerVar.equals("Horse") || scannerVar.equals("String")) || initializer < 1)
         {
             System.out.print(MessageFormat.format("Please choose a program below or type \"exit\" to exit: \n{0}\n{1}\n{2}\n{3}\n{4}",
                     " - Type \"DivideA\" to run the Self Divisor Part A Program",
